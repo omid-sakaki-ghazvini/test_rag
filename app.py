@@ -86,7 +86,7 @@ from langchain_core.prompts import PromptTemplate
 prompt_sample = """
     I know context: {context}
     when asked: {question}
-    my response using only information in the context is:
+    my response using only information in the context is !:
     """
 prompt = PromptTemplate(template=prompt_sample, input_variables=["context", "question"])
 
