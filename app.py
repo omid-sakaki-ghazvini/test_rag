@@ -7,25 +7,6 @@ Original file is located at
     https://colab.research.google.com/drive/1BrBzjj8CLYlVEygAekScfzRm92siC5UY
 """
 
-st.markdown("""
-<style>
-.big-font {
-    font-size:30px !important;
-    text-align: center;
-    color: white;
-}
-.large-font {
-    font-size:20px !important;
-    text-align: right;
-    color: white;
-}
-.small-font {
-    font-size:20px !important;
-    text-align: right;
-    color: white;
-}
-</style>
-""", unsafe_allow_html=True)
 
 # Commented out IPython magic to ensure Python compatibility.
 # %%capture
