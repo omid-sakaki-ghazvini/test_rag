@@ -6,4 +6,10 @@ langchain_core
 faiss-cpu
 pandas
 transformers
+torch
+wandb
 sentence-transformers
+
+langchain-openai 
+langchainhub 
+chromadb 
