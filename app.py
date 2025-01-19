@@ -110,7 +110,6 @@ if question:
 # Generate a response using the context and question
     llm_response = llm_chain.invoke({"context": doc_context, "question": question})
     answer = translator.translate(llm_response["text"], src='auto', dest='fa')
-    st.markdown('<p class="large-font">:پاسخ سوال شما براساس داده هایی که من به آن دسترسی دارم</p>', unsafe_allow_html=True)
 #print(answer.text)
     st.write(answer.text)
 
