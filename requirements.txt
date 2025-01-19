@@ -2,14 +2,10 @@ streamlit
 googletrans==3.1.0a0
 langchain
 langchain-community
-
 faiss-cpu
 pandas
 transformers
 torch
 wandb
 sentence-transformers
-
-langchain-openai 
-langchainhub 
 chromadb 
