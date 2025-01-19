@@ -96,14 +96,23 @@ from langchain.chains import LLMChain
 
 llm_chain = LLMChain(prompt=prompt, llm=llm)
 
+import streamlit as st
+
 # Ask a question and retrieve the context from the vector store
-question = "لپتاب روشن نمیشه و روی منبع تغذیه ۵امپر می‌کشد چیکار باید کنم؟"
+
+st.markdown('<p class="small-font">:لطفا سوال خود را در کادر زیر وارد نمایید</p>', unsafe_allow_html=True)
+question = st.text_area('') 
+#question = "لپتاب روشن نمیشه و روی منبع تغذیه ۵امپر می‌کشد چیکار باید کنم؟"
 question = translator.translate(question)
 question = question.text
 doc_context = db.similarity_search(question)
-print(doc_context[0].page_content)
+#print(doc_context[0].page_content)
 
 # Generate a response using the context and question
 llm_response = llm_chain.invoke({"context": doc_context, "question": question})
 answer = translator.translate(llm_response["text"], src='auto', dest='fa')
-print(answer.text)
+st.markdown('<p class="large-font">:پاسخ سوال شما براساس داده هایی که من به آن دسترسی دارم</p>', unsafe_allow_html=True)
+#print(answer.text)
+st.write(answer.text)
+
+st.markdown("<br><hr><center>Made with ❤️ by <a href='https://omidsakaki.ir/'><strong>omid sakaki ghazvini</strong></a></center><hr>", unsafe_allow_html=True)
