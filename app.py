@@ -23,7 +23,6 @@ translator = Translator()
 translated = translator.translate('خرابی های مربوط به اتصال 19 ولت: لپتاب روشن نمیشود و روی منبع تغذیه 5 آمپر میکشد، خرابی در مدار محافظ یا بعد مدار محافظ هستش باید فیوز خروجی رو برداره ببینید اتصالی از کدوم سمت هست اگر از مدار محافظ باشه جک آداپتور یا قطعات مدار محافظ باشد  اگر مشکل از بعد از مدار محافظ باشد همه جاهایی که ۱۹ولت رفته باشه می‌تونه باعث اتصالی باشه باید تست دیودی خروجی مدار محافظ رو بگیریم و با تست دیودی تک تک سلف ها با کنفی مدار مقایسه کنیم اون سلفی که عدد یکسان نشون میده خرابی از اون مدار هست عدد صفر  بیشترین خرابی از خازن های مدار سی پی یو و گرافیک هست عدد نزدیک صفر ماسفت های مدار سی پی یو گرافیک یا رم می باشد دو طرف تست عدد یکسان از ماسفت های مدار شارژ یا مدار پاور می باشد')
 
 # obtain translated string by using attribute .text
-translated.text
 
 docs = [translated.text]
 
@@ -32,7 +31,6 @@ from langchain.text_splitter import CharacterTextSplitter
 
 text_splitter = CharacterTextSplitter(chunk_size=1000, chunk_overlap=0, separator='', strip_whitespace=False)
 documents = text_splitter.create_documents(docs)
-documents
 
 # Commented out IPython magic to ensure Python compatibility.
 # %%capture
