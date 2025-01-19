@@ -108,8 +108,13 @@ if question:
     doc_context = db.similarity_search(question)
 
 # Generate a response using the context and question
+
+    # Generate a response using the context and question
     llm_response = llm_chain.invoke({"context": doc_context, "question": question})
-    answer = translator.translate(llm_response["text"], src='auto', dest='fa')
+    response = llm_response['text']
+    response = response.split("!:")[1]
+
+    answer = translator.translate(response, src='auto', dest='fa')
 #print(answer.text)
     st.write(answer.text)
 
