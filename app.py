@@ -100,13 +100,11 @@ import streamlit as st
 
 st.markdown('<p class="small-font">:لطفا سوال خود را در کادر زیر وارد نمایید</p>', unsafe_allow_html=True)
 question = st.text_area('') 
-#question = "لپتاب روشن نمیشه و روی منبع تغذیه ۵امپر می‌کشد چیکار باید کنم؟"
 
 if question:
     question = translator.translate(question)
     question = question.text
     doc_context = db.similarity_search(question)
-#print(doc_context[0].page_content)
 
 # Generate a response using the context and question
     llm_response = llm_chain.invoke({"context": doc_context, "question": question})
