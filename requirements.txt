@@ -2,7 +2,7 @@ streamlit
 googletrans==3.1.0a0
 langchain
 langchain-community
-langchain_core
+
 faiss-cpu
 pandas
 transformers
